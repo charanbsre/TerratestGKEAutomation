@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2 
+  replicas: 1 
   template:
     metadata:
       labels:
@@ -19,6 +19,11 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         readinessProbe:
           httpGet:
             scheme: HTTP
@@ -55,3 +60,16 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nginx-deployment
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nginx-deployment
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 5
