@@ -1,0 +1,1495 @@
+PS C:\GCP\GKE_Project\test> go test gke_test.go -v -timeout 60m
+=== RUN   TestTerraformGkeExample
+TestTerraformGkeExample 2023-03-11T15:45:11Z test_structure.go:130: Copied terraform folder ..\terraform to C:\Users\CBAISE~1\AppData\Local\Temp\TestTerraformGkeExample3339224230\GKE_Project\terraform
+TestTerraformGkeExample 2023-03-11T15:45:11Z retry.go:91: terraform [init -upgrade=false]
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: Running command terraform with args [init -upgrade=false]
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: Initializing modules...
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: - dev_gke in modules
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: Initializing the backend...
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: Successfully configured the backend "gcs"! Terraform will automatically
+TestTerraformGkeExample 2023-03-11T15:45:11Z logger.go:66: use this backend unless the backend configuration changes.
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66: Initializing provider plugins...
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66: - Reusing previous version of hashicorp/google from the dependency lock file
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66: - Reusing previous version of hashicorp/null from the dependency lock file
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66: - Reusing previous version of hashicorp/time from the dependency lock file
+TestTerraformGkeExample 2023-03-11T15:45:12Z logger.go:66: - Installing hashicorp/google v4.56.0...
+TestTerraformGkeExample 2023-03-11T15:45:16Z logger.go:66: - Installed hashicorp/google v4.56.0 (signed by HashiCorp)
+TestTerraformGkeExample 2023-03-11T15:45:16Z logger.go:66: - Installing hashicorp/null v3.2.1...
+TestTerraformGkeExample 2023-03-11T15:45:17Z logger.go:66: - Installed hashicorp/null v3.2.1 (signed by HashiCorp)
+TestTerraformGkeExample 2023-03-11T15:45:18Z logger.go:66: - Installing hashicorp/time v0.9.1...
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: - Installed hashicorp/time v0.9.1 (signed by HashiCorp)
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: Terraform has been successfully initialized!
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: You may now begin working with Terraform. Try running "terraform plan" to see
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: any changes that are required for your infrastructure. All Terraform commands
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: should now work.
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: If you ever set or change modules or backend configuration for Terraform,
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: rerun this command to reinitialize your working directory. If you forget, other
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: commands will detect it and remind you to do so if necessary.
+TestTerraformGkeExample 2023-03-11T15:45:19Z retry.go:91: terraform [apply -input=false -auto-approve -var machine_type=e2-medium -var subnetwork_name=dev-subnet -var ip_cidr_range=10.0.0.0/18 -var vpc_name=nextopsvpc01 -var gke_master_zone=us-central1-c -var gke_worker_zone=us-central1-f -var project_id=protean-beaker-376112 -var region=us-central1 -var gke_cluster_name=nextopsgke01 -lock=false]
+TestTerraformGkeExample 2023-03-11T15:45:19Z logger.go:66: Running command terraform with args [apply -input=false -auto-approve -var machine_type=e2-medium -var subnetwork_name=dev-subnet -var ip_cidr_range=10.0.0.0/18 -var vpc_name=nextopsvpc01 -var gke_master_zone=us-central1-c -var gke_worker_zone=us-central1-f -var project_id=protean-beaker-376112 -var region=us-central1 -var gke_cluster_name=nextopsgke01 -lock=false]
+TestTerraformGkeExample 2023-03-11T15:45:26Z logger.go:66: module.dev_gke.null_resource.ingress: Refreshing state... [id=882940085]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66: Terraform used the selected providers to generate the following execution
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + create
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66: Terraform will perform the following actions:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_address.nat will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_address" "nat" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + address            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + address_type       = "EXTERNAL"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_timestamp = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name               = "nat"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + network_tier       = "PREMIUM"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + purpose            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + region             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + subnetwork         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + users              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_firewall.allow-ssh will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_firewall" "allow-ssh" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_timestamp = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + destination_ranges = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + direction          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_logging     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name               = "allow-ssh"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + network            = "nextopsvpc01"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + priority           = 1000
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + source_ranges      = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + "0.0.0.0/0",
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + allow {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + ports    = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + "22",
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + protocol = "tcp"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_global_address.default will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_global_address" "default" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + address            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_timestamp = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name               = "ingress-webapp01"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project            = "protean-beaker-376112"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_network.vpc will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_network" "vpc" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + auto_create_subnetworks         = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + delete_default_routes_on_create = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + gateway_ipv4                    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + internal_ipv6_range             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + mtu                             = 1460
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name                            = "nextopsvpc01"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project                         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + routing_mode                    = "REGIONAL"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link                       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_router.router will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_router" "router" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_timestamp = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name               = "router"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + network            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + region             = "us-central1"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_router_nat.nat will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_router_nat" "nat" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_dynamic_port_allocation      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_endpoint_independent_mapping = true
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + icmp_idle_timeout_sec               = 30
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                                  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name                                = "nat"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + nat_ip_allocate_option              = "MANUAL_ONLY"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + nat_ips                             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project                             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + region                              = "us-central1"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + router                              = "router"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + source_subnetwork_ip_ranges_to_nat  = "LIST_OF_SUBNETWORKS"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + tcp_established_idle_timeout_sec    = 1200
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + tcp_time_wait_timeout_sec           = 120
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + tcp_transitory_idle_timeout_sec     = 30
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + udp_idle_timeout_sec                = 30
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + subnetwork {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + name                     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + secondary_ip_range_names = []
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + source_ip_ranges_to_nat  = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + "ALL_IP_RANGES",
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_compute_subnetwork.subnet will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_compute_subnetwork" "subnet" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_timestamp         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + external_ipv6_prefix       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + fingerprint                = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + gateway_address            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + ip_cidr_range              = "10.0.0.0/18"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + ipv6_cidr_range            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name                       = "dev-subnet"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + network                    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + private_ip_google_access   = true
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + private_ipv6_google_access = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project                    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + purpose                    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + region                     = "us-central1"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + secondary_ip_range         = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + ip_cidr_range = "10.48.0.0/14"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + range_name    = "k8s-pod-range"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             },
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + ip_cidr_range = "10.52.0.0/20"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + range_name    = "k8s-service-range"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             },
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link                  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + stack_type                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_container_cluster.primary will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_container_cluster" "primary" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + cluster_ipv4_cidr           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + datapath_provider           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + default_max_pods_per_node   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_binary_authorization = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_intranode_visibility = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_kubernetes_alpha     = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_l4_ilb_subsetting    = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_legacy_abac          = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enable_shielded_nodes       = true
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + endpoint                    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + initial_node_count          = 2
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + label_fingerprint           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + location                    = "us-central1-c"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + logging_service             = "logging.googleapis.com/kubernetes"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + master_version              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + monitoring_service          = "monitoring.googleapis.com/kubernetes"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name                        = "nextopsgke01"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + network                     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + networking_mode             = "VPC_NATIVE"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + node_locations              = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + "us-central1-f",
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + node_version                = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + operation                   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + private_ipv6_google_access  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project                     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + remove_default_node_pool    = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + self_link                   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + services_ipv4_cidr          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + subnetwork                  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + tpu_ipv4_cidr_block         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + addons_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + cloudrun_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disabled           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + load_balancer_type = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + config_connector_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + dns_cache_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + gce_persistent_disk_csi_driver_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + gcp_filestore_csi_driver_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + gke_backup_agent_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + horizontal_pod_autoscaling {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disabled = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + http_load_balancing {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disabled = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + network_policy_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + authenticator_groups_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + security_group = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + cluster_autoscaling {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + auto_provisioning_defaults {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + boot_disk_kms_key = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disk_size         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disk_type         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + image_type        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + min_cpu_platform  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + oauth_scopes      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + service_account   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + management {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + auto_repair     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + auto_upgrade    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + upgrade_options = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + shielded_instance_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enable_integrity_monitoring = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enable_secure_boot          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + upgrade_settings {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + max_surge       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + max_unavailable = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + strategy        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + blue_green_settings {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                       + node_pool_soak_duration = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                       + standard_rollout_policy {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                           + batch_node_count    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                           + batch_percentage    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                           + batch_soak_duration = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + resource_limits {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + maximum       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + minimum       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + resource_type = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + confidential_nodes {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + cost_management_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + database_encryption {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + key_name = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + state    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + default_snat_status {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + disabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + ip_allocation_policy {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + cluster_ipv4_cidr_block       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + cluster_secondary_range_name  = "k8s-pod-range"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + services_ipv4_cidr_block      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + services_secondary_range_name = "k8s-service-range"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + logging_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enable_components = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + master_auth {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + client_certificate     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + client_key             = (sensitive value)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + cluster_ca_certificate = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + client_certificate_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + issue_client_certificate = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + master_authorized_networks_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + gcp_public_cidrs_access_enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + cidr_blocks {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + cidr_block   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + display_name = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + mesh_certificates {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enable_certificates = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + monitoring_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enable_components = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + managed_prometheus {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + node_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + disk_size_gb      = 75
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + disk_type         = "pd-standard"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + guest_accelerator = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + image_type        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + labels            = {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + "role" = "general"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + local_ssd_count   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + logging_variant   = "DEFAULT"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + machine_type      = "e2-medium"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + metadata          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + min_cpu_platform  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + oauth_scopes      = [
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + "https://www.googleapis.com/auth/cloud-platform",
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             ]
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + preemptible       = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + service_account   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + spot              = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + taint             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + shielded_instance_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enable_integrity_monitoring = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enable_secure_boot          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + workload_metadata_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + mode = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + node_pool {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + initial_node_count          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + instance_group_urls         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + managed_instance_group_urls = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + max_pods_per_node           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + name                        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + name_prefix                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + node_count                  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + node_locations              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + version                     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + autoscaling {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + location_policy      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + max_node_count       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + min_node_count       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + total_max_node_count = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + total_min_node_count = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + management {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + auto_repair  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + auto_upgrade = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + network_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + create_pod_range     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enable_private_nodes = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + pod_ipv4_cidr_block  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + pod_range            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + node_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + boot_disk_kms_key = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disk_size_gb      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + disk_type         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + guest_accelerator = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + image_type        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + labels            = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + local_ssd_count   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + logging_variant   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + machine_type      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + metadata          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + min_cpu_platform  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + node_group        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + oauth_scopes      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + preemptible       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + resource_labels   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + service_account   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + spot              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + tags              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + taint             = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + gcfs_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + gvnic {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + kubelet_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + cpu_cfs_quota        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + cpu_cfs_quota_period = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + cpu_manager_policy   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + pod_pids_limit       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + linux_node_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + sysctls = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + reservation_affinity {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + consume_reservation_type = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + key                      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + values                   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + shielded_instance_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enable_integrity_monitoring = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + enable_secure_boot          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + workload_metadata_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + mode = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + placement_policy {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + type = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + upgrade_settings {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + max_surge       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + max_unavailable = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + strategy        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + blue_green_settings {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + node_pool_soak_duration = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + standard_rollout_policy {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                       + batch_node_count    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                       + batch_percentage    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                       + batch_soak_duration = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + node_pool_defaults {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + node_config_defaults {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + logging_variant = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + notification_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + pubsub {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + topic   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + filter {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + event_type = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + private_cluster_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + master_ipv4_cidr_block = "172.16.0.0/28"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + peering_name           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + private_endpoint       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + public_endpoint        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + master_global_access_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + release_channel {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + channel = "REGULAR"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + service_external_ips_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + vertical_pod_autoscaling {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enabled = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + workload_identity_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + workload_pool = "protean-beaker-376112.svc.id.goog"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_dns_managed_zone.nextopszone will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_dns_managed_zone" "nextopszone" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + creation_time   = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + description     = "Managed by Terraform"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + dns_name        = "nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + force_destroy   = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id              = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + managed_zone_id = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name            = "nextopsvideos"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name_servers    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + visibility      = "public"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + cloud_logging_config {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + enable_logging = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_dns_record_set.helloapp will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_dns_record_set" "helloapp" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + managed_zone = "nextopsvideos"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name         = "helloapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + rrdatas      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + ttl          = 300
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + type         = "A"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_dns_record_set.secretapp will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_dns_record_set" "secretapp" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + managed_zone = "nextopsvideos"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name         = "secretapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + rrdatas      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + ttl          = 300
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + type         = "A"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_project_iam_member.secret-ro-sa will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_project_iam_member" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + etag    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + member  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project = "protean-beaker-376112"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + role    = "roles/secretmanager.secretAccessor"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_secret_manager_secret.secret-basic will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_secret_manager_secret" "secret-basic" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + create_time = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + expire_time = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id          = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name        = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + secret_id   = "myApiKey"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + replication {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:           + user_managed {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:               + replicas {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                   + location = "us-central1"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_secret_manager_secret_version.secret-version-basic will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_secret_manager_secret_version" "secret-version-basic" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + create_time  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + destroy_time = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + enabled      = true
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id           = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + secret       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + secret_data  = (sensitive value)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + version      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_service_account.kubernetes will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_service_account" "kubernetes" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + account_id = "kubernetes"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + disabled   = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + email      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + member     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + unique_id  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_service_account.secret-ro-sa will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_service_account" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + account_id = "secret-ro-sa"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + disabled   = false
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + email      = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id         = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + member     = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + name       = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + project    = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + unique_id  = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.google_service_account_iam_member.secret-ro-sa will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "google_service_account_iam_member" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + etag               = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id                 = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + member             = "serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + role               = "roles/iam.workloadIdentityUser"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + service_account_id = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.null_resource.local will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "null_resource" "local" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   # module.dev_gke.time_sleep.wait_4_min will be created
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + resource "time_sleep" "wait_4_min" {
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + destroy_duration = "240s"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:       + id               = (known after apply)
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66: Plan: 19 to add, 0 to change, 0 to destroy.
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66: Changes to Outputs:
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + cluster_name   = "nextopsgke01"
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + helloapp_fqdn  = "helloapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:45:27Z logger.go:66:   + secretapp_fqdn = "secretapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_service_account.secret-ro-sa: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_dns_managed_zone.nextopszone: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_service_account.kubernetes: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_compute_global_address.default: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_compute_address.nat: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_secret_manager_secret.secret-basic: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_compute_network.vpc: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_secret_manager_secret.secret-basic: Creation complete after 1s [id=projects/protean-beaker-376112/secrets/myApiKey]
+TestTerraformGkeExample 2023-03-11T15:45:28Z logger.go:66: module.dev_gke.google_secret_manager_secret_version.secret-version-basic: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:29Z logger.go:66: module.dev_gke.google_dns_managed_zone.nextopszone: Creation complete after 1s [id=projects/protean-beaker-376112/managedZones/nextopsvideos]
+TestTerraformGkeExample 2023-03-11T15:45:29Z logger.go:66: module.dev_gke.google_service_account.kubernetes: Creation complete after 2s [id=projects/protean-beaker-376112/serviceAccounts/kubernetes@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:45:29Z logger.go:66: module.dev_gke.google_service_account.secret-ro-sa: Creation complete after 2s [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:45:29Z logger.go:66: module.dev_gke.google_service_account_iam_member.secret-ro-sa: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:29Z logger.go:66: module.dev_gke.google_project_iam_member.secret-ro-sa: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:30Z logger.go:66: module.dev_gke.google_secret_manager_secret_version.secret-version-basic: Creation complete after 1s [id=projects/1020936655198/secrets/myApiKey/versions/1]
+TestTerraformGkeExample 2023-03-11T15:45:30Z logger.go:66: module.dev_gke.google_compute_address.nat: Creation complete after 3s [id=projects/protean-beaker-376112/regions/us-central1/addresses/nat]
+TestTerraformGkeExample 2023-03-11T15:45:34Z logger.go:66: module.dev_gke.google_service_account_iam_member.secret-ro-sa: Creation complete after 4s [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com/roles/iam.workloadIdentityUser/serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]]
+TestTerraformGkeExample 2023-03-11T15:45:38Z logger.go:66: module.dev_gke.google_compute_network.vpc: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:45:38Z logger.go:66: module.dev_gke.google_compute_global_address.default: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:45:38Z logger.go:66: module.dev_gke.google_project_iam_member.secret-ro-sa: Creation complete after 8s [id=protean-beaker-376112/roles/secretmanager.secretAccessor/serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_compute_network.vpc: Creation complete after 12s [id=projects/protean-beaker-376112/global/networks/nextopsvpc01]
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_compute_router.router: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_compute_global_address.default: Creation complete after 12s [id=projects/protean-beaker-376112/global/addresses/ingress-webapp01]
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_dns_record_set.helloapp: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:39Z logger.go:66: module.dev_gke.google_dns_record_set.secretapp: Creating...
+TestTerraformGkeExample 2023-03-11T15:45:40Z logger.go:66: module.dev_gke.google_dns_record_set.secretapp: Creation complete after 1s [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/secretapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:45:41Z logger.go:66: module.dev_gke.google_dns_record_set.helloapp: Creation complete after 1s [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/helloapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:45:49Z logger.go:66: module.dev_gke.google_compute_router.router: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:45:49Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:45:49Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:45:51Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Creation complete after 11s [id=projects/protean-beaker-376112/global/firewalls/allow-ssh]
+TestTerraformGkeExample 2023-03-11T15:45:53Z logger.go:66: module.dev_gke.google_compute_router.router: Creation complete after 13s [id=projects/protean-beaker-376112/regions/us-central1/routers/router]
+TestTerraformGkeExample 2023-03-11T15:45:59Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Still creating... [20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:03Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Creation complete after 24s [id=projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet]
+TestTerraformGkeExample 2023-03-11T15:46:03Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Creating...
+TestTerraformGkeExample 2023-03-11T15:46:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Creating...
+TestTerraformGkeExample 2023-03-11T15:46:13Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:13Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:17Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Creation complete after 13s [id=protean-beaker-376112/us-central1/router/nat]
+TestTerraformGkeExample 2023-03-11T15:46:23Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:33Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:43Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:46:53Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:13Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:23Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:33Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:43Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:47:53Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [1m50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:13Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:23Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:33Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:43Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:48:53Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [2m50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:13Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:23Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:33Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:43Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:49:53Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [3m50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:13Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:23Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:33Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:43Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:50:53Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [4m50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:51:03Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still creating... [5m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.google_container_cluster.primary: Creation complete after 5m0s [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01]
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.null_resource.local: Creating...
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Creating...
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.null_resource.local: Provisioning with 'local-exec'...
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Creation complete after 0s [id=2023-03-11T15:51:04Z]
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.null_resource.local (local-exec): Executing: ["cmd" "/C" "gcloud container clusters get-credentials nextopsgke01 --zone us-central1-c --project protean-beaker-376112"]
+TestTerraformGkeExample 2023-03-11T15:51:04Z logger.go:66: module.dev_gke.null_resource.local (local-exec): Fetching cluster endpoint and auth data.
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: module.dev_gke.null_resource.local (local-exec): kubeconfig entry generated for nextopsgke01.
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: module.dev_gke.null_resource.local: Creation complete after 1s [id=1909404815]
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: Outputs:
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: cluster_name = "nextopsgke01"
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: helloapp_fqdn = "helloapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:51:05Z logger.go:66: secretapp_fqdn = "secretapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:51:05Z retry.go:91: Wait for 4 Kube Nodes to be registered.
+TestTerraformGkeExample 2023-03-11T15:51:05Z node.go:33: Getting list of nodes from Kubernetes
+TestTerraformGkeExample 2023-03-11T15:51:05Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:51:07Z gke_test.go:42: All nodes registered
+TestTerraformGkeExample 2023-03-11T15:51:07Z retry.go:91: Wait for all Kube Nodes to be ready
+TestTerraformGkeExample 2023-03-11T15:51:07Z node.go:33: Getting list of nodes from Kubernetes
+TestTerraformGkeExample 2023-03-11T15:51:07Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:51:07Z node.go:105: All nodes ready
+TestTerraformGkeExample 2023-03-11T15:51:07Z node.go:33: Getting list of nodes from Kubernetes
+TestTerraformGkeExample 2023-03-11T15:51:07Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:51:07Z node.go:62: Filtering list of nodes from Kubernetes for Ready nodes
+TestTerraformGkeExample 2023-03-11T15:51:07Z logger.go:66: Running command kubectl with args [--kubeconfig C:/Users/cbaisetty/.kube/config --namespace kube-system apply -f C:\GCP\GKE_Project\secrets_dep]
+TestTerraformGkeExample 2023-03-11T15:51:11Z logger.go:66: csidriver.storage.k8s.io/secrets-store.csi.k8s.io created
+TestTerraformGkeExample 2023-03-11T15:51:11Z logger.go:66: serviceaccount/secrets-store-csi-driver-provider-gcp created
+TestTerraformGkeExample 2023-03-11T15:51:12Z logger.go:66: clusterrolebinding.rbac.authorization.k8s.io/secrets-store-csi-driver-provider-gcp-rolebinding created
+TestTerraformGkeExample 2023-03-11T15:51:12Z logger.go:66: clusterrole.rbac.authorization.k8s.io/secrets-store-csi-driver-provider-gcp-role created
+TestTerraformGkeExample 2023-03-11T15:51:13Z logger.go:66: daemonset.apps/csi-secrets-store-provider-gcp created
+TestTerraformGkeExample 2023-03-11T15:51:13Z logger.go:66: serviceaccount/secrets-store-csi-driver created
+TestTerraformGkeExample 2023-03-11T15:51:14Z logger.go:66: clusterrole.rbac.authorization.k8s.io/secretproviderclasses-role created
+TestTerraformGkeExample 2023-03-11T15:51:14Z logger.go:66: clusterrolebinding.rbac.authorization.k8s.io/secretproviderclasses-rolebinding created
+TestTerraformGkeExample 2023-03-11T15:51:15Z logger.go:66: daemonset.apps/csi-secrets-store created
+TestTerraformGkeExample 2023-03-11T15:51:16Z logger.go:66: customresourcedefinition.apiextensions.k8s.io/secretproviderclasses.secrets-store.csi.x-k8s.io created
+TestTerraformGkeExample 2023-03-11T15:51:16Z logger.go:66: customresourcedefinition.apiextensions.k8s.io/secretproviderclasspodstatuses.secrets-store.csi.x-k8s.io created
+TestTerraformGkeExample 2023-03-11T15:51:16Z logger.go:66: Running command kubectl with args [--kubeconfig C:/Users/cbaisetty/.kube/config --namespace default apply -f C:\GCP\GKE_Project\manifests]
+TestTerraformGkeExample 2023-03-11T15:51:18Z logger.go:66: deployment.apps/nginx-deployment created
+TestTerraformGkeExample 2023-03-11T15:51:18Z logger.go:66: configmap/nginx-index-html-configmap created
+TestTerraformGkeExample 2023-03-11T15:51:19Z logger.go:66: service/nginx-service created
+TestTerraformGkeExample 2023-03-11T15:51:19Z logger.go:66: ingress.networking.k8s.io/ingress created
+TestTerraformGkeExample 2023-03-11T15:51:20Z logger.go:66: secretproviderclass.secrets-store.csi.x-k8s.io/app-secrets created
+TestTerraformGkeExample 2023-03-11T15:51:20Z logger.go:66: deployment.apps/secretapp-deploy created
+TestTerraformGkeExample 2023-03-11T15:51:21Z logger.go:66: service/secretapp-service created
+TestTerraformGkeExample 2023-03-11T15:51:21Z logger.go:66: serviceaccount/secret-ro-sa created
+TestTerraformGkeExample 2023-03-11T15:51:21Z retry.go:91: Wait for ingress ingress to be provisioned.
+TestTerraformGkeExample 2023-03-11T15:51:21Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:51:21Z retry.go:103: Wait for ingress ingress to be provisioned. returned an error: Ingress ingress is not available. Sleeping for 1m0s and will try again.
+TestTerraformGkeExample 2023-03-11T15:52:21Z retry.go:91: Wait for ingress ingress to be provisioned.
+TestTerraformGkeExample 2023-03-11T15:52:21Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:52:21Z retry.go:103: Wait for ingress ingress to be provisioned. returned an error: Ingress ingress is not available. Sleeping for 1m0s and will try again.
+TestTerraformGkeExample 2023-03-11T15:53:21Z retry.go:91: Wait for ingress ingress to be provisioned.
+TestTerraformGkeExample 2023-03-11T15:53:21Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:53:22Z retry.go:103: Wait for ingress ingress to be provisioned. returned an error: Ingress ingress is not available. Sleeping for 1m0s and will try again.
+TestTerraformGkeExample 2023-03-11T15:54:22Z retry.go:91: Wait for ingress ingress to be provisioned.
+TestTerraformGkeExample 2023-03-11T15:54:22Z client.go:42: Configuring Kubernetes client using config file C:/Users/cbaisetty/.kube/config with context
+TestTerraformGkeExample 2023-03-11T15:54:22Z ingress.go:83: Ingress is now available
+TestTerraformGkeExample 2023-03-11T15:54:22Z retry.go:91: terraform [output -no-color -json secretapp_fqdn]
+TestTerraformGkeExample 2023-03-11T15:54:22Z logger.go:66: Running command terraform with args [output -no-color -json secretapp_fqdn]
+TestTerraformGkeExample 2023-03-11T15:54:23Z logger.go:66: "secretapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:54:23Z retry.go:91: terraform [output -no-color -json helloapp_fqdn]
+TestTerraformGkeExample 2023-03-11T15:54:23Z logger.go:66: Running command terraform with args [output -no-color -json helloapp_fqdn]
+TestTerraformGkeExample 2023-03-11T15:54:24Z logger.go:66: "helloapp.nextopsvideos.com."
+TestTerraformGkeExample 2023-03-11T15:54:24Z retry.go:91: HTTP GET to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:54:24Z http_helper.go:59: Making an HTTP GET call to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:54:34Z retry.go:103: HTTP GET to URL http://secretapp.nextopsvideos.com. returned an error: Get "http://secretapp.nextopsvideos.com.": context deadline exceeded (Client.Timeout exceeded while awaiting headers). Sleeping for 1m0s and will try again.
+TestTerraformGkeExample 2023-03-11T15:55:34Z retry.go:91: HTTP GET to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:55:34Z http_helper.go:59: Making an HTTP GET call to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:55:34Z retry.go:103: HTTP GET to URL http://secretapp.nextopsvideos.com. returned an error: Get "http://secretapp.nextopsvideos.com.": read tcp 192.168.1.11:63434->34.120.112.76:80: wsarecv: An existing connection was forcibly closed by the remote host.. Sleeping for 1m0s and will try again.
+TestTerraformGkeExample 2023-03-11T15:56:34Z retry.go:91: HTTP GET to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:56:34Z http_helper.go:59: Making an HTTP GET call to URL http://secretapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:56:34Z retry.go:91: HTTP GET to URL http://helloapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:56:34Z http_helper.go:59: Making an HTTP GET call to URL http://helloapp.nextopsvideos.com.
+TestTerraformGkeExample 2023-03-11T15:56:34Z retry.go:91: terraform [destroy -auto-approve -input=false -var region=us-central1 -var gke_cluster_name=nextopsgke01 -var project_id=protean-beaker-376112 -var vpc_name=nextopsvpc01 -var gke_master_zone=us-central1-c -var gke_worker_zone=us-central1-f -var machine_type=e2-medium -var subnetwork_name=dev-subnet -var ip_cidr_range=10.0.0.0/18 -lock=false]
+TestTerraformGkeExample 2023-03-11T15:56:34Z logger.go:66: Running command terraform with args [destroy -auto-approve -input=false -var region=us-central1 -var gke_cluster_name=nextopsgke01 -var project_id=protean-beaker-376112 -var vpc_name=nextopsvpc01 -var gke_master_zone=us-central1-c -var gke_worker_zone=us-central1-f -var machine_type=e2-medium -var subnetwork_name=dev-subnet -var ip_cidr_range=10.0.0.0/18 -lock=false]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.null_resource.ingress: Refreshing state... [id=882940085]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_secret_manager_secret.secret-basic: Refreshing state... [id=projects/protean-beaker-376112/secrets/myApiKey]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_global_address.default: Refreshing state... [id=projects/protean-beaker-376112/global/addresses/ingress-webapp01]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_service_account.kubernetes: Refreshing state... [id=projects/protean-beaker-376112/serviceAccounts/kubernetes@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_address.nat: Refreshing state... [id=projects/protean-beaker-376112/regions/us-central1/addresses/nat]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_service_account.secret-ro-sa: Refreshing state... [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_network.vpc: Refreshing state... [id=projects/protean-beaker-376112/global/networks/nextopsvpc01]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_dns_managed_zone.nextopszone: Refreshing state... [id=projects/protean-beaker-376112/managedZones/nextopsvideos]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_secret_manager_secret_version.secret-version-basic: Refreshing state... [id=projects/1020936655198/secrets/myApiKey/versions/1]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_dns_record_set.secretapp: Refreshing state... [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/secretapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_dns_record_set.helloapp: Refreshing state... [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/helloapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_router.router: Refreshing state... [id=projects/protean-beaker-376112/regions/us-central1/routers/router]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Refreshing state... [id=projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Refreshing state... [id=projects/protean-beaker-376112/global/firewalls/allow-ssh]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_project_iam_member.secret-ro-sa: Refreshing state... [id=protean-beaker-376112/roles/secretmanager.secretAccessor/serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:56:39Z logger.go:66: module.dev_gke.google_service_account_iam_member.secret-ro-sa: Refreshing state... [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com/roles/iam.workloadIdentityUser/serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]]
+TestTerraformGkeExample 2023-03-11T15:56:40Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Refreshing state... [id=protean-beaker-376112/us-central1/router/nat]
+TestTerraformGkeExample 2023-03-11T15:56:40Z logger.go:66: module.dev_gke.google_container_cluster.primary: Refreshing state... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01]
+TestTerraformGkeExample 2023-03-11T15:56:42Z logger.go:66: module.dev_gke.null_resource.local: Refreshing state... [id=1909404815]
+TestTerraformGkeExample 2023-03-11T15:56:42Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Refreshing state... [id=2023-03-11T15:51:04Z]
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66: Terraform used the selected providers to generate the following execution
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66: plan. Resource actions are indicated with the following symbols:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - destroy
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66: Terraform will perform the following actions:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_address.nat will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_address" "nat" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - address            = "34.173.76.134" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - address_type       = "EXTERNAL" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_timestamp = "2023-03-11T07:45:30.801-08:00" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                 = "projects/protean-beaker-376112/regions/us-central1/addresses/nat" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name               = "nat" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network_tier       = "PREMIUM" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - prefix_length      = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project            = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - region             = "us-central1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link          = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/addresses/nat" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - users              = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/routers/router",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_firewall.allow-ssh will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_firewall" "allow-ssh" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_timestamp      = "2023-03-11T07:45:41.732-08:00" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - destination_ranges      = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - direction               = "INGRESS" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - disabled                = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                      = "projects/protean-beaker-376112/global/firewalls/allow-ssh" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                    = "allow-ssh" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network                 = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - priority                = 1000 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                 = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link               = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/firewalls/allow-ssh" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - source_ranges           = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "0.0.0.0/0",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - source_service_accounts = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - source_tags             = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - target_service_accounts = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - target_tags             = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - allow {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - ports    = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "22",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - protocol = "tcp" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_global_address.default will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_global_address" "default" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - address            = "34.120.112.76" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - address_type       = "EXTERNAL" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_timestamp = "2023-03-11T07:45:30.230-08:00" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                 = "projects/protean-beaker-376112/global/addresses/ingress-webapp01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name               = "ingress-webapp01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - prefix_length      = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project            = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link          = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/addresses/ingress-webapp01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_network.vpc will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_network" "vpc" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - auto_create_subnetworks         = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - delete_default_routes_on_create = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_ula_internal_ipv6        = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                              = "projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - mtu                             = 1460 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                            = "nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                         = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - routing_mode                    = "REGIONAL" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link                       = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_router.router will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_router" "router" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_timestamp            = "2023-03-11T07:45:42.347-08:00" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - encrypted_interconnect_router = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                            = "projects/protean-beaker-376112/regions/us-central1/routers/router" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                          = "router" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network                       = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                       = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - region                        = "us-central1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link                     = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/routers/router" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_router_nat.nat will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_router_nat" "nat" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - drain_nat_ips                       = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_dynamic_port_allocation      = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_endpoint_independent_mapping = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - icmp_idle_timeout_sec               = 30 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                                  = "protean-beaker-376112/us-central1/router/nat" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - max_ports_per_vm                    = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - min_ports_per_vm                    = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                                = "nat" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - nat_ip_allocate_option              = "MANUAL_ONLY" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - nat_ips                             = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/addresses/nat",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                             = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - region                              = "us-central1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - router                              = "router" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - source_subnetwork_ip_ranges_to_nat  = "LIST_OF_SUBNETWORKS" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - tcp_established_idle_timeout_sec    = 1200 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - tcp_time_wait_timeout_sec           = 120 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - tcp_transitory_idle_timeout_sec     = 30 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - udp_idle_timeout_sec                = 30 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - subnetwork {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - name                     = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - secondary_ip_range_names = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - source_ip_ranges_to_nat  = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "ALL_IP_RANGES",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_compute_subnetwork.subnet will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_compute_subnetwork" "subnet" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_timestamp         = "2023-03-11T07:45:42.496-08:00" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - gateway_address            = "10.0.0.1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                         = "projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - ip_cidr_range              = "10.0.0.0/18" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                       = "dev-subnet" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network                    = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - private_ip_google_access   = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - private_ipv6_google_access = "DISABLE_GOOGLE_ACCESS" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                    = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - purpose                    = "PRIVATE" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - region                     = "us-central1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - secondary_ip_range         = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - ip_cidr_range = "10.48.0.0/14"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - range_name    = "k8s-pod-range"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             },
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - ip_cidr_range = "10.52.0.0/20"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - range_name    = "k8s-service-range"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             },
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link                  = "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - stack_type                 = "IPV4_ONLY" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_container_cluster.primary will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_container_cluster" "primary" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - cluster_ipv4_cidr           = "10.48.0.0/14" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - default_max_pods_per_node   = 110 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_autopilot            = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_binary_authorization = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_intranode_visibility = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_kubernetes_alpha     = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_l4_ilb_subsetting    = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_legacy_abac          = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_shielded_nodes       = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enable_tpu                  = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - endpoint                    = "35.202.20.118" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                          = "projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - initial_node_count          = 2 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - label_fingerprint           = "a9dc16a7" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - location                    = "us-central1-c" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - logging_service             = "logging.googleapis.com/kubernetes" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - master_version              = "1.24.9-gke.3200" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - monitoring_service          = "monitoring.googleapis.com/kubernetes" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name                        = "nextopsgke01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network                     = "projects/protean-beaker-376112/global/networks/nextopsvpc01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - networking_mode             = "VPC_NATIVE" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - node_locations              = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "us-central1-f",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - node_version                = "1.24.9-gke.3200" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project                     = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - remove_default_node_pool    = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - resource_labels             = {} -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - self_link                   = "https://container.googleapis.com/v1/projects/protean-beaker-376112/zones/us-central1-c/clusters/nextopsgke01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - services_ipv4_cidr          = "10.52.0.0/20" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - subnetwork                  = "projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - addons_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - gce_persistent_disk_csi_driver_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enabled = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - horizontal_pod_autoscaling {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - disabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - http_load_balancing {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - disabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - network_policy_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - disabled = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - binary_authorization {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - cluster_autoscaling {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - database_encryption {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - state = "DECRYPTED" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - default_snat_status {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - disabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - ip_allocation_policy {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - cluster_ipv4_cidr_block       = "10.48.0.0/14" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - cluster_secondary_range_name  = "k8s-pod-range" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - services_ipv4_cidr_block      = "10.52.0.0/20" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - services_secondary_range_name = "k8s-service-range" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - logging_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enable_components = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "SYSTEM_COMPONENTS",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "WORKLOADS",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - master_auth {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - cluster_ca_certificate = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVMVENDQXBXZ0F3SUJBZ0lSQUwydGRCd292VkpTaXE2SndFWHBQN2d3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa01EWTBNVEF4TXpNdE1EWmpPQzAwWXpnd0xXSmhNMk10WkRVNVpURXdZV1l6WTJSbQpNQ0FYRFRJek1ETXhNVEUwTkRZd05Wb1lEekl3TlRNd016QXpNVFUwTmpBMVdqQXZNUzB3S3dZRFZRUURFeVF3Ck5qUXhNREV6TXkwd05tTTRMVFJqT0RBdFltRXpZeTFrTlRsbE1UQmhaak5qWkdZd2dnR2lNQTBHQ1NxR1NJYjMKRFFFQkFRVUFBNElCandBd2dnR0tBb0lCZ1FDWnlpYy9IK3BDY0RzdXdHN3RpRDV1OTVhbU9GVmRpTXJWcHBBVApubHVWcjNHU2JuZ1Z1YlZ1SGJGejdOWDNKZm5Yb0NlL0xSYmVGMEVtdk45eXRjTzM5bE9zVVZidENVbTdCdFl0CnZnUmpJZElDOGRKVGxkN0FaQjJOanlkdHNVRlBlVk9maHFIN3NJT29PRG5lYVA3Vi9TYXRuUkVRWnAyVm8rbE0KdVN3ZjVwWERvb2Y2MVdnTHVqRU1UZkMwNUR2cjZTYU50L0U2cm8veUs4WDZnNjdBcVcwOTlObE9DdWNBbjJEaApESEFLbTdSMjhJdGIyZHZHZGxLMmZFNHN1ZE5xV05Mb2I2RzFyYWY4ZkJaL1ZhV3IxbmtUSEptWjhwVUhycWdDCk8xRE5uZnZCN1JsUDZQcnhvTjlhVktpYUVRVmYxcWFSaG5HVUhkY0FCRUdKdEo0aHhyNUdNTVVrVXhKUUE5K24KSVo4RXlMWDlkQWR0eFNEUzlIYzRIMG1JVFFpdjZEb01taWxidVA2YXdISzlnU29KWnFyam5XbnVHWWFtK09TZgpVck56RnFES090RDc0Wno0MlVNNk0wTGk4bnl3SlUrQUFxOHdEeXZKUGluZVFIZnFKY2FUNllidHo3NXhmZVo2CjIyM0hoNmpjUDVFWndQMy9KeURwOUg2S0lqY0NBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGQll6Ti91MWdKYkhLSXNMdVl4V1RhMW9IclVsTUEwRwpDU3FHU0liM0RRRUJDd1VBQTRJQmdRQXRwaUthM016UHhHYkFFWmxBNzNLSTdvMUc0K0l6YVZaUDhXSGx3clFaCnB5VWZYV1RCRjcyU2d3QVcxdXVzZ0tlOWc0dmpadVd3bm9xSXJCM2V5NkJJdWN5Ri84NEhHTmxlS1lnVndGODQKZTBLRnVSb1o0R1pydmU1Sys5TWN6UUF0b1VQYjUyY3Z3Y3lWMDMxSGZUUW51MnBubEVlb0RQVXdmNVdZUEI1SApLSk5LcEFqd2JRamlmcWN4anhOVmJ5djkwaHNCOFVOcytONm9OL2lQclZ6d3hWZEdwK2tvV2x6eFBubitrcnJGCjJ0R1BEc1BhbGVLdFhiSCszcGRvcHpSV3ZaTm1ZdXVSSU1YbjhpTDVRaG51WHpBTHBTWkpGOEVONkg3eFhVVncKbUFPZDkzSE5SRWExclRmeVJCMVlQMmlnU0ZHRkVFZ3FhWTZDWG1YdURjL3ZWNWxDZEI3QzhWV2I5cWpUVXBvVApPR3NnZnByU3NTbGs3ODJUNlR3bEcyR1Bra1I4U2xaWnNERWt5VnJoR0pZeEc0QlJKb0lYZmhvWHYwaGpmVTA3CmI3M21hbnNIei9nLzdTZ05pMUVRNGlIL1RrdngrM1FISEhkUVdOQXdhb1RkZWdnMmlBQnFPZEE2WlJHdnlnL0wKc2xQZTZoRzkwUU1CVzg3bzJTbjI5Mlk9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - client_certificate_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - issue_client_certificate = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - monitoring_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enable_components = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "SYSTEM_COMPONENTS",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - network_policy {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enabled  = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - provider = "PROVIDER_UNSPECIFIED" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - node_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - disk_size_gb      = 75 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - disk_type         = "pd-standard" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - guest_accelerator = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - image_type        = "COS_CONTAINERD" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - labels            = {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "role" = "general"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             } -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - local_ssd_count   = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - logging_variant   = "DEFAULT" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - machine_type      = "e2-medium" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - metadata          = {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "disable-legacy-endpoints" = "true"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             } -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - oauth_scopes      = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "https://www.googleapis.com/auth/cloud-platform",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - preemptible       = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - resource_labels   = {} -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - service_account   = "kubernetes@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - spot              = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - tags              = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - taint             = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - shielded_instance_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enable_integrity_monitoring = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enable_secure_boot          = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - workload_metadata_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - mode = "GKE_METADATA" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - node_pool {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - initial_node_count          = 2 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - instance_group_urls         = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/zones/us-central1-c/instanceGroupManagers/gke-nextopsgke01-default-pool-5a0c1abd-grp",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/zones/us-central1-f/instanceGroupManagers/gke-nextopsgke01-default-pool-7ce086c9-grp",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - managed_instance_group_urls = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/zones/us-central1-c/instanceGroups/gke-nextopsgke01-default-pool-5a0c1abd-grp",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "https://www.googleapis.com/compute/v1/projects/protean-beaker-376112/zones/us-central1-f/instanceGroups/gke-nextopsgke01-default-pool-7ce086c9-grp",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - max_pods_per_node           = 110 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - name                        = "default-pool" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - node_count                  = 2 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - node_locations              = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "us-central1-c",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - "us-central1-f",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - version                     = "1.24.9-gke.3200" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - management {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - auto_repair  = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - auto_upgrade = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - network_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - create_pod_range     = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enable_private_nodes = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - pod_ipv4_cidr_block  = "10.48.0.0/14" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - pod_range            = "k8s-pod-range" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - node_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - disk_size_gb      = 75 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - disk_type         = "pd-standard" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - guest_accelerator = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - image_type        = "COS_CONTAINERD" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - labels            = {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - "role" = "general"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 } -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - local_ssd_count   = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - logging_variant   = "DEFAULT" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - machine_type      = "e2-medium" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - metadata          = {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - "disable-legacy-endpoints" = "true"
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 } -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - oauth_scopes      = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - "https://www.googleapis.com/auth/cloud-platform",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - preemptible       = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - resource_labels   = {} -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - service_account   = "kubernetes@protean-beaker-376112.iam.gserviceaccount.com" ->
+ null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - spot              = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - tags              = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - taint             = [] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - shielded_instance_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - enable_integrity_monitoring = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - enable_secure_boot          = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - workload_metadata_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - mode = "GKE_METADATA" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - upgrade_settings {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - max_surge       = 1 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - max_unavailable = 0 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - strategy        = "SURGE" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - node_pool_defaults {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - node_config_defaults {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - logging_variant = "DEFAULT" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - notification_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - pubsub {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - private_cluster_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enable_private_endpoint = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enable_private_nodes    = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - private_endpoint        = "10.0.0.2" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - public_endpoint         = "35.202.20.118" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - master_global_access_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - enabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - release_channel {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - channel = "REGULAR" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - service_external_ips_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enabled = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - workload_identity_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - workload_pool = "protean-beaker-376112.svc.id.goog" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_dns_managed_zone.nextopszone will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_dns_managed_zone" "nextopszone" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - creation_time   = "2023-03-11T15:45:30.092Z" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - description     = "Managed by Terraform" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - dns_name        = "nextopsvideos.com." -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - force_destroy   = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id              = "projects/protean-beaker-376112/managedZones/nextopsvideos" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - labels          = {} -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - managed_zone_id = -1214554943 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name            = "nextopsvideos" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name_servers    = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "ns-cloud-c1.googledomains.com.",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "ns-cloud-c2.googledomains.com.",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "ns-cloud-c3.googledomains.com.",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "ns-cloud-c4.googledomains.com.",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project         = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - visibility      = "public" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - cloud_logging_config {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - enable_logging = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_dns_record_set.helloapp will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_dns_record_set" "helloapp" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id           = "projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/helloapp.nextopsvideos.com./A" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - managed_zone = "nextopsvideos" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name         = "helloapp.nextopsvideos.com." -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project      = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - rrdatas      = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "34.120.112.76",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - ttl          = 300 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - type         = "A" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_dns_record_set.secretapp will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_dns_record_set" "secretapp" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id           = "projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/secretapp.nextopsvideos.com./A" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - managed_zone = "nextopsvideos" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name         = "secretapp.nextopsvideos.com." -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project      = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - rrdatas      = [
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - "34.120.112.76",
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         ] -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - ttl          = 300 -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - type         = "A" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_project_iam_member.secret-ro-sa will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_project_iam_member" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - etag    = "BwX2ocTO6so=" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id      = "protean-beaker-376112/roles/secretmanager.secretAccessor/serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - member  = "serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - role    = "roles/secretmanager.secretAccessor" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_secret_manager_secret.secret-basic will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_secret_manager_secret" "secret-basic" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - create_time = "2023-03-11T15:45:30.172518Z" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id          = "projects/protean-beaker-376112/secrets/myApiKey" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - labels      = {} -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name        = "projects/1020936655198/secrets/myApiKey" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project     = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - secret_id   = "myApiKey" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - replication {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - automatic = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:           - user_managed {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:               - replicas {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                   - location = "us-central1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:                 }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:             }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:         }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_secret_manager_secret_version.secret-version-basic will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_secret_manager_secret_version" "secret-version-basic" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - create_time = "2023-03-11T15:45:30.933524Z" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - enabled     = true -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id          = "projects/1020936655198/secrets/myApiKey/versions/1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name        = "projects/1020936655198/secrets/myApiKey/versions/1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - secret      = "projects/protean-beaker-376112/secrets/myApiKey" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - secret_data = (sensitive value)
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - version     = "1" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_service_account.kubernetes will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_service_account" "kubernetes" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - account_id = "kubernetes" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - disabled   = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - email      = "kubernetes@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id         = "projects/protean-beaker-376112/serviceAccounts/kubernetes@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - member     = "serviceAccount:kubernetes@protean-beaker-376112.iam.gserviceaccount.com" ->
+ null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name       = "projects/protean-beaker-376112/serviceAccounts/kubernetes@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project    = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - unique_id  = "103848249188928731857" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_service_account.secret-ro-sa will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_service_account" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - account_id = "secret-ro-sa" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - disabled   = false -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - email      = "secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id         = "projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - member     = "serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - name       = "projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - project    = "protean-beaker-376112" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - unique_id  = "106690434003334279626" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.google_service_account_iam_member.secret-ro-sa will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "google_service_account_iam_member" "secret-ro-sa" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - etag               = "BwX2ocSSYUU=" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id                 = "projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com/roles/iam.workloadIdentityUser/serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - member             = "serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - role               = "roles/iam.workloadIdentityUser" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - service_account_id = "projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.null_resource.ingress will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "null_resource" "ingress" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id = "882940085" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.null_resource.local will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "null_resource" "local" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id = "1909404815" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   # module.dev_gke.time_sleep.wait_4_min will be destroyed
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - resource "time_sleep" "wait_4_min" {
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - destroy_duration = "240s" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:       - id               = "2023-03-11T15:51:04Z" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:     }
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66: Plan: 0 to add, 0 to change, 20 to destroy.
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66: Changes to Outputs:
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - cluster_name   = "nextopsgke01" -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - helloapp_fqdn  = "helloapp.nextopsvideos.com." -> null
+TestTerraformGkeExample 2023-03-11T15:56:43Z logger.go:66:   - secretapp_fqdn = "secretapp.nextopsvideos.com." -> null
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.local: Destroying... [id=1909404815]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Destroying... [id=2023-03-11T15:51:04Z]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.ingress: Destroying... [id=882940085]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.ingress: Provisioning with 'local-exec'...
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.local: Destruction complete after 0s
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.ingress (local-exec): Executing: ["cmd" "/C" "kubectl delete ing ingress"]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_service_account_iam_member.secret-ro-sa: Destroying... [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com/roles/iam.workloadIdentityUser/serviceAccount:protean-beaker-376112.svc.id.goog[default/secret-ro-sa]]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_project_iam_member.secret-ro-sa: Destroying... [id=protean-beaker-376112/roles/secretmanager.secretAccessor/serviceAccount:secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_secret_manager_secret_version.secret-version-basic: Destroying... [id=projects/1020936655198/secrets/myApiKey/versions/1]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_dns_record_set.secretapp: Destroying... [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/secretapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_dns_record_set.helloapp: Destroying... [id=projects/protean-beaker-376112/managedZones/nextopsvideos/rrsets/helloapp.nextopsvideos.com./A]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Destroying... [id=projects/protean-beaker-376112/global/firewalls/allow-ssh]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Destroying... [id=protean-beaker-376112/us-central1/router/nat]
+TestTerraformGkeExample 2023-03-11T15:56:45Z logger.go:66: module.dev_gke.null_resource.ingress (local-exec): ingress.networking.k8s.io "ingress" deleted
+TestTerraformGkeExample 2023-03-11T15:56:46Z logger.go:66: module.dev_gke.google_secret_manager_secret_version.secret-version-basic: Destruction complete after 0s
+TestTerraformGkeExample 2023-03-11T15:56:46Z logger.go:66: module.dev_gke.google_secret_manager_secret.secret-basic: Destroying... [id=projects/protean-beaker-376112/secrets/myApiKey]
+TestTerraformGkeExample 2023-03-11T15:56:46Z logger.go:66: module.dev_gke.google_dns_record_set.secretapp: Destruction complete after 1s
+TestTerraformGkeExample 2023-03-11T15:56:47Z logger.go:66: module.dev_gke.google_secret_manager_secret.secret-basic: Destruction complete after 2s
+TestTerraformGkeExample 2023-03-11T15:56:48Z logger.go:66: module.dev_gke.google_dns_record_set.helloapp: Destruction complete after 3s
+TestTerraformGkeExample 2023-03-11T15:56:48Z logger.go:66: module.dev_gke.google_compute_global_address.default: Destroying... [id=projects/protean-beaker-376112/global/addresses/ingress-webapp01]
+TestTerraformGkeExample 2023-03-11T15:56:48Z logger.go:66: module.dev_gke.google_dns_managed_zone.nextopszone: Destroying... [id=projects/protean-beaker-376112/managedZones/nextopsvideos]
+TestTerraformGkeExample 2023-03-11T15:56:50Z logger.go:66: module.dev_gke.google_dns_managed_zone.nextopszone: Destruction complete after 1s
+TestTerraformGkeExample 2023-03-11T15:56:50Z logger.go:66: module.dev_gke.google_service_account_iam_member.secret-ro-sa: Destruction complete after 5s
+TestTerraformGkeExample 2023-03-11T15:56:54Z logger.go:66: module.dev_gke.google_project_iam_member.secret-ro-sa: Destruction complete after 8s
+TestTerraformGkeExample 2023-03-11T15:56:54Z logger.go:66: module.dev_gke.google_service_account.secret-ro-sa: Destroying... [id=projects/protean-beaker-376112/serviceAccounts/secret-ro-sa@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T15:56:54Z logger.go:66: module.dev_gke.google_service_account.secret-ro-sa: Destruction complete after 1s
+TestTerraformGkeExample 2023-03-11T15:56:55Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:56:55Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:56:55Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Still destroying... [id=protean-beaker-376112/us-central1/router/nat, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:56:55Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Still destroying... [id=projects/protean-beaker-376112/global/firewalls/allow-ssh, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:56:57Z logger.go:66: module.dev_gke.google_compute_firewall.allow-ssh: Destruction complete after 11s
+TestTerraformGkeExample 2023-03-11T15:56:58Z logger.go:66: module.dev_gke.google_compute_global_address.default: Still destroying... [id=projects/protean-beaker-376112/global/addresses/ingress-webapp01, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:56:59Z logger.go:66: module.dev_gke.google_compute_router_nat.nat: Destruction complete after 13s
+TestTerraformGkeExample 2023-03-11T15:56:59Z logger.go:66: module.dev_gke.google_compute_router.router: Destroying... [id=projects/protean-beaker-376112/regions/us-central1/routers/router]
+TestTerraformGkeExample 2023-03-11T15:56:59Z logger.go:66: module.dev_gke.google_compute_address.nat: Destroying... [id=projects/protean-beaker-376112/regions/us-central1/addresses/nat]
+TestTerraformGkeExample 2023-03-11T15:57:00Z logger.go:66: module.dev_gke.google_compute_global_address.default: Destruction complete after 11s
+TestTerraformGkeExample 2023-03-11T15:57:05Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:05Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 20s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:09Z logger.go:66: module.dev_gke.google_compute_address.nat: Still destroying... [id=projects/protean-beaker-376112/regions/us-central1/addresses/nat, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:09Z logger.go:66: module.dev_gke.google_compute_router.router: Still destroying... [id=projects/protean-beaker-376112/regions/us-central1/routers/router, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:10Z logger.go:66: module.dev_gke.google_compute_address.nat: Destruction complete after 12s
+TestTerraformGkeExample 2023-03-11T15:57:11Z logger.go:66: module.dev_gke.google_compute_router.router: Destruction complete after 12s
+TestTerraformGkeExample 2023-03-11T15:57:15Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:15Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 30s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:25Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:25Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 40s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:35Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:35Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 50s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:45Z logger.go:66: module.dev_gke.null_resource.ingress: Still destroying... [id=882940085, 1m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:45Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m0s elapsed]
+TestTerraformGkeExample 2023-03-11T15:57:49Z logger.go:66: module.dev_gke.null_resource.ingress: Destruction complete after 1m4s
+TestTerraformGkeExample 2023-03-11T15:57:55Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m10s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:05Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m21s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:15Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m31s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:25Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m41s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:35Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 1m51s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:45Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m1s elapsed]
+TestTerraformGkeExample 2023-03-11T15:58:55Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m11s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:05Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m21s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:15Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m31s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:27Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m42s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:37Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 2m52s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:47Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m2s elapsed]
+TestTerraformGkeExample 2023-03-11T15:59:57Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m12s elapsed]
+TestTerraformGkeExample 2023-03-11T16:00:07Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m22s elapsed]
+TestTerraformGkeExample 2023-03-11T16:00:17Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m32s elapsed]
+TestTerraformGkeExample 2023-03-11T16:00:27Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m42s elapsed]
+TestTerraformGkeExample 2023-03-11T16:00:37Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Still destroying... [id=2023-03-11T15:51:04Z, 3m52s elapsed]
+TestTerraformGkeExample 2023-03-11T16:00:46Z logger.go:66: module.dev_gke.time_sleep.wait_4_min: Destruction complete after 4m2s
+TestTerraformGkeExample 2023-03-11T16:00:46Z logger.go:66: module.dev_gke.google_container_cluster.primary: Destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01]
+TestTerraformGkeExample 2023-03-11T16:00:56Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:06Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:16Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 30s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:26Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 40s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:36Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 50s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:46Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m0s elapsed]
+TestTerraformGkeExample 2023-03-11T16:01:57Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:07Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:17Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m30s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:27Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m40s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:37Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 1m50s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:47Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m0s elapsed]
+TestTerraformGkeExample 2023-03-11T16:02:57Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:07Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:17Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m30s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:27Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m40s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:37Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 2m50s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:47Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m0s elapsed]
+TestTerraformGkeExample 2023-03-11T16:03:57Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:07Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:17Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m30s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:27Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m40s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:37Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 3m50s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:47Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 4m0s elapsed]
+TestTerraformGkeExample 2023-03-11T16:04:57Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 4m10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:05:07Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 4m20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:05:17Z logger.go:66: module.dev_gke.google_container_cluster.primary: Still destroying... [id=projects/protean-beaker-376112/locations/us-central1-c/clusters/nextopsgke01, 4m30s elapsed]
+TestTerraformGkeExample 2023-03-11T16:05:21Z logger.go:66: module.dev_gke.google_container_cluster.primary: Destruction complete after 4m35s
+TestTerraformGkeExample 2023-03-11T16:05:21Z logger.go:66: module.dev_gke.google_service_account.kubernetes: Destroying... [id=projects/protean-beaker-376112/serviceAccounts/kubernetes@protean-beaker-376112.iam.gserviceaccount.com]
+TestTerraformGkeExample 2023-03-11T16:05:21Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Destroying... [id=projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet]
+TestTerraformGkeExample 2023-03-11T16:05:22Z logger.go:66: module.dev_gke.google_service_account.kubernetes: Destruction complete after 0s
+TestTerraformGkeExample 2023-03-11T16:05:31Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Still destroying... [id=projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:05:41Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Still destroying... [id=projects/protean-beaker-376112/regions/us-central1/subnetworks/dev-subnet, 20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:05:44Z logger.go:66: module.dev_gke.google_compute_subnetwork.subnet: Destruction complete after 23s
+TestTerraformGkeExample 2023-03-11T16:05:44Z logger.go:66: module.dev_gke.google_compute_network.vpc: Destroying... [id=projects/protean-beaker-376112/global/networks/nextopsvpc01]
+TestTerraformGkeExample 2023-03-11T16:05:54Z logger.go:66: module.dev_gke.google_compute_network.vpc: Still destroying... [id=projects/protean-beaker-376112/global/networks/nextopsvpc01, 10s elapsed]
+TestTerraformGkeExample 2023-03-11T16:06:04Z logger.go:66: module.dev_gke.google_compute_network.vpc: Still destroying... [id=projects/protean-beaker-376112/global/networks/nextopsvpc01, 20s elapsed]
+TestTerraformGkeExample 2023-03-11T16:06:05Z logger.go:66: module.dev_gke.google_compute_network.vpc: Destruction complete after 21s
+TestTerraformGkeExample 2023-03-11T16:06:06Z logger.go:66:
+TestTerraformGkeExample 2023-03-11T16:06:06Z logger.go:66: Destroy complete! Resources: 20 destroyed.
+TestTerraformGkeExample 2023-03-11T16:06:06Z logger.go:66:
+--- PASS: TestTerraformGkeExample (1253.24s)
+PASS
+ok      command-line-arguments  1253.350s
+PS C:\GCP\GKE_Project\test>
