@@ -15,7 +15,7 @@ After the successful deployment of GKE cluster, it also deploys following Kubern
 
         1.	Two deployments
             a. Secretapp-Deployment – To simulate secretmanager integration and safe retrieval of secret
-            b. HelloApp-Deployment – To simulate ingress controller functionality.
+            b. HelloApp-Deployment – To simulate ingress controller functionality and HPA functionality
         2.	Two services
             a. Secret-service
             b. Nginx-service
